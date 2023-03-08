@@ -1,6 +1,6 @@
 <?php
 //Tipos de Triângulos
-
+ 
 $x = fgets(STDIN);
 
 $y = explode(" ", $x);

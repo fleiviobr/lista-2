@@ -1,4 +1,4 @@
-<?php
+<?php 
 // Imposto de Renda
 
 $entrada = fgets(STDIN);

@@ -1,5 +1,6 @@
 <?php
 //Intervalo
+
 $x = fgets(STDIN);
 
 if ($x >= 0 && $x <= 25) {

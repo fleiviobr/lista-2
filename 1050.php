@@ -1,5 +1,5 @@
 <?php
-//DDD
+//DDD 
 
 $entrada = fgets(STDIN);
 

@@ -1,5 +1,6 @@
 <?php
 //Lanche
+
 $y = explode(" ", fgets(STDIN));
 $cod = $y[0];
 $quant = $y[1];

@@ -1,6 +1,6 @@
 <?php
 //Multiplos
-
+ 
 $x = fgets(STDIN);
 
 $y = explode(" ", $x);

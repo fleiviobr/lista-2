@@ -1,6 +1,6 @@
 <?php
 //Aumento de Salario
-
+ 
 $entrada = fgets(STDIN);
 $entrada = explode(" ", $entrada);
 

@@ -38,5 +38,5 @@ else {
         echo "Aluno reprovado." . PHP_EOL;
     }
     echo "Media final: " . number_format($media, 1, '.', '') . PHP_EOL;
-}
+} 
 ?>

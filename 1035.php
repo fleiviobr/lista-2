@@ -1,5 +1,6 @@
 <?php
 //Teste de Seleção 1
+
 $x = fgets(STDIN);
 
 $y = explode(" ", $x);

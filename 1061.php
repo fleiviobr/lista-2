@@ -16,7 +16,7 @@ $horaInicialSegundos = $horaInicial * 3600;
 $minutoInicialSegundos = $minutoInicial * 60;
 
 $horaFinalSegundos = $horaFinal * 3600;
-$minutoFinalSegundos = $minutoFinal * 60;
+$minutoFinalSegundos = $minutoFinal * 60; 
 
 $segundosInicial = $horaInicialSegundos + $minutoInicialSegundos + $segundoInicial;
 $segundosFinal = $horaFinalSegundos + $minutoFinalSegundos + $segundoFinal;

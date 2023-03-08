@@ -1,5 +1,5 @@
 <?php
-// Sort simples
+// Sort simples 
 
 $x = fgets(STDIN);
 $y = explode(" ", $x);

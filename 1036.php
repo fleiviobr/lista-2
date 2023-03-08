@@ -1,5 +1,6 @@
 <?php
 //Formula de Baskara
+
 $x = fgets(STDIN);
 
 $y = explode(" ", $x);

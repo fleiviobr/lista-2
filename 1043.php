@@ -1,5 +1,6 @@
 <?php
 //Triangulo
+
 $x = fgets(STDIN);
 
 $y = explode(" ", $x);

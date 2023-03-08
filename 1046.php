@@ -1,6 +1,6 @@
 <?php
 //Tempo de Jogo
-
+ 
 $x = fgets(STDIN);
 
 $y = explode(" ", $x);

@@ -1,6 +1,6 @@
 <?php
 // Animal
-
+ 
 $entrada = fgets(STDIN);
 $entrada2 = fgets(STDIN);
 $entrada3 = fgets(STDIN);
