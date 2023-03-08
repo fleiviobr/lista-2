@@ -1,35 +1,27 @@
 <?php
 // Tempo de um Evento
 
-$entrada = fgets(STDIN);
-$entrada = explode(" ", $entrada);
+fscanf(STDIN, "%d dia(s)", $day_i);
+fscanf(STDIN, "%d : %d : %d", $hour_i, $minute_i, $second_i);
 
-$horaInicial = $entrada[0];
-$minutoInicial = $entrada[1];
-$segundoInicial = $entrada[2];
+fscanf(STDIN, "%d dia(s)", $day_f);
+fscanf(STDIN, "%d : %d : %d", $hour_f, $minute_f, $second_f);
 
-$horaFinal = $entrada[3];
-$minutoFinal = $entrada[4];
-$segundoFinal = $entrada[5];
+$time_i = $day_i * 86400 + $hour_i * 3600 + $minute_i * 60 + $second_i;
+$time_f = $day_f * 86400 + $hour_f * 3600 + $minute_f * 60 + $second_f;
 
-$horaInicialSegundos = $horaInicial * 3600;
-$minutoInicialSegundos = $minutoInicial * 60;
+$diff = $time_f - $time_i;
 
-$horaFinalSegundos = $horaFinal * 3600;
-$minutoFinalSegundos = $minutoFinal * 60; 
+$days = intdiv($diff, 86400);
+$diff -= $days * 86400;
+$hours = intdiv($diff, 3600);
+$diff -= $hours * 3600;
+$minutes = intdiv($diff, 60);
+$diff -= $minutes * 60;
+$seconds = $diff;
 
-$segundosInicial = $horaInicialSegundos + $minutoInicialSegundos + $segundoInicial;
-$segundosFinal = $horaFinalSegundos + $minutoFinalSegundos + $segundoFinal;
-
-$duracaoSegundos = $segundosFinal - $segundosInicial;
-
-if ($duracaoSegundos <= 0) {
-    $duracaoSegundos = 86400 + $duracaoSegundos;
-}
-
-$duracaoHoras = floor($duracaoSegundos / 3600);
-$duracaoMinutos = floor(($duracaoSegundos % 3600) / 60);
-$duracaoSegundos = floor(($duracaoSegundos % 3600) % 60);
-
-echo $duracaoHoras . ":" . $duracaoMinutos . ":" . $duracaoSegundos . PHP_EOL;
+echo $day . " dia(s)" . PHP_EOL;
+echo $hour . " hora(s)" . PHP_EOL;
+echo $minute . " minuto(s)" . PHP_EOL;
+echo $second . " segundo(s)" . PHP_EOL;
 ?>

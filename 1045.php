@@ -1,31 +1,28 @@
 <?php
-//Tipos de Triângulos
- 
-$x = fgets(STDIN);
+// Tipo de Triângulos
 
-$y = explode(" ", $x);
+$entrada = readline();
+$valores = explode(" ", $entrada);
+sort($valores); 
 
-$a = $y[0];
-$b = $y[1];
-$c = $y[2];
-
-if ($a == 0 && $b == 0 && $c == 0) {
-    echo "NAO FORMA TRIANGULO" . PHP_EOL;
+if (($valores[2] >= $valores[1] + $valores[0])) {
+  echo "NAO FORMA TRIANGULO\n";
 } else {
-    if ($a * $a == $b * $b + $c * $c) {
-        echo "TRIANGULO RETANGULO" . PHP_EOL;
-    }
-    if ($a * $a > $b * $b + $c * $c) {
-        echo "TRIANGULO OBTUSANGULO" . PHP_EOL;
-    }
-    if ($a * $a < $b * $b + $c * $c) {
-        echo "TRIANGULO ACUTANGULO" . PHP_EOL;
-    }
-    if ($a == $b && $b == $c) {
-        echo "TRIANGULO EQUILATERO" . PHP_EOL;
-    }
-    if (($a == $b && $b != $c) || ($a == $c && $c != $b) || ($b == $c && $c != $a)) {
-        echo "TRIANGULO ISOSCELES" . PHP_EOL;
-    }
+
+  if ($valores[2]*$valores[2] == $valores[1]*$valores[1] + $valores[0]*$valores[0]) {
+    echo "TRIANGULO RETANGULO\n";
+  }
+  if ($valores[2]*$valores[2] > $valores[1]*$valores[1] + $valores[0]*$valores[0]) {
+    echo "TRIANGULO OBTUSANGULO\n";
+  }
+  if ($valores[2]*$valores[2] < $valores[1]*$valores[1] + $valores[0]*$valores[0]) {
+    echo "TRIANGULO ACUTANGULO\n";
+  }
+  if ($valores[2] == $valores[1] && $valores[1] == $valores[0]) {
+    echo "TRIANGULO EQUILATERO\n";
+  }
+  if (($valores[2] == $valores[1] && $valores[1] != $valores[0]) || ($valores[2] == $valores[0] && $valores[0] != $valores[1]) || ($valores[1] == $valores[0] && $valores[0] != $valores[2])) {
+    echo "TRIANGULO ISOSCELES\n";
+  }
 }
 ?>
